@@ -1,5 +1,1 @@
-$(function() {
-	name = "Jelmer";
-
-	alert(name);
-});
+// Plugins
