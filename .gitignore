@@ -44,6 +44,7 @@ Thumbs.db
 ##############
  
 *.scssc
+*.sassc
 .sass-cache/
  
  
