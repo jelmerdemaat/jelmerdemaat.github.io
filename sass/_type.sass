@@ -1,2 +1,62 @@
 html
+	color: $black
+	
+	font-family: "ff-enzo-web-1", "ff-enzo-web-2", sans-serif
+	font-weight: 300
+	font-style: normal
 	line-height: 1.45
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+	a
+		color: inherit
+
+a
+	color: $orange
+	text-decoration: none
+	transition: .2s all ease-out
+
+	border-bottom: 1px solid transparent
+
+	&:focus,
+	&:hover,
+	&:active
+		color: darken($orange, 5%)
+		border-bottom: 1px solid
+
+p
+	word-break: break-word
+	hyphens: auto
+
+img
+	max-width: 100%
+	vertical-align: bottom
+
+::selection
+	color: white
+	background: rgba($orange, .95)
+
+
+header
+	h1
+		line-height: 1.2
+
+		sub
+			color: $gray
+			font-weight: normal
+
+nav
+	font-size: 18px
+
+article
+	h2
+		color: white
+		font-size: 17px
+		text-transform: uppercase
+
+	div
+		text-shadow: 1px 1px 0 #444

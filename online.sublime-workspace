@@ -7,16 +7,64 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "index.htm",
+			"settings":
+			{
+				"buffer_size": 960,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "sass/main.sass",
+			"settings":
+			{
+				"buffer_size": 274,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "sass/_type.sass",
+			"settings":
+			{
+				"buffer_size": 194,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "sass/_base.sass",
+			"settings":
+			{
+				"buffer_size": 126,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 56.0,
+		"height": 375.0,
 		"selected_items":
 		[
 			[
+				"pack",
+				"Package Control: List Packages"
+			],
+			[
+				"wrap",
+				"Word Wrap: Toggle"
+			],
+			[
 				"install",
 				"Package Control: Install Package"
+			],
+			[
+				"fet",
+				"Fetch: File"
+			],
+			[
+				"keyb",
+				"Preferences: Key Bindings - User"
 			],
 			[
 				"fetch",
@@ -25,10 +73,6 @@
 			[
 				"feth",
 				"Fetch: Manage"
-			],
-			[
-				"fet",
-				"Fetch: File"
 			],
 			[
 				"fetch f",
@@ -83,7 +127,7 @@
 	},
 	"console":
 	{
-		"height": 139.0,
+		"height": 387.0,
 		"history":
 		[
 			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
@@ -100,27 +144,35 @@
 	},
 	"file_history":
 	[
-		"/home/jelmer/projects/online/Gruntfile.js",
+		"/home/jelmer/projects/online/dist/css/main.css",
+		"/home/jelmer/projects/online/node_modules/grunt-contrib-uglify/node_modules/uglify-js/lib/mozilla-ast.js",
+		"/home/jelmer/projects/online/node_modules/grunt-contrib-sass/CHANGELOG",
+		"/home/jelmer/projects/online/node_modules/grunt/node_modules/coffee-script/lib/coffee-script/coffee-script.js",
+		"/home/jelmer/projects/online/node_modules/grunt-browser-sync/node_modules/browser-sync/.idea/codeStyleSettings.xml",
+		"/home/jelmer/projects/online/node_modules/grunt-browser-sync/node_modules/browser-sync/node_modules/connect/lib/middleware/basicAuth.js",
+		"/home/jelmer/projects/online/node_modules/grunt/internal-tasks/bump.js",
 		"/home/jelmer/projects/online/sass/_type.sass",
+		"/home/jelmer/projects/online/sass/_base.sass",
+		"/home/jelmer/projects/online/node_modules/grunt/lib/grunt/task.js",
+		"/home/jelmer/.config/sublime-text-3/Packages/User/Fetch.sublime-settings",
+		"/home/jelmer/.config/sublime-text-3/Packages/User/Default (Linux).sublime-keymap",
+		"/home/jelmer/projects/online/.gitignore",
+		"/home/jelmer/projects/online/Gruntfile.js",
 		"/home/jelmer/projects/online/sass/main.sass",
 		"/home/jelmer/projects/online/js/plugins.grande.js",
 		"/home/jelmer/projects/online/index.htm",
-		"/home/jelmer/projects/online/dist/css/main.css",
 		"/home/jelmer/.bashrc-backup",
 		"/home/jelmer/.bashrc",
 		"/home/jelmer/Downloads/base16-monokai.dark.sh",
 		"/home/jelmer/Downloads/solarized/osx-terminal.app-colors-solarized/README.md",
-		"/home/jelmer/projects/online/sass/_base.sass",
 		"/home/jelmer/projects/online/sass/_normalize.scss",
 		"/home/jelmer/projects/online/dist/index.htm",
-		"/home/jelmer/.config/sublime-text-3/Packages/User/Fetch.sublime-settings",
 		"/home/jelmer/projects/online/online.sublime-project",
 		"/home/jelmer/.config/sublime-text-3/Packages/User/sftp_servers/jelmerdemaat.nl",
 		"/home/jelmer/projects/wp-config.php",
 		"/home/jelmer/.config/sublime-text-3/Servers/jelmerdemaat.nl",
 		"/etc/apt/sources.list",
 		"/home/jelmer/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
-		"/home/jelmer/.config/sublime-text-3/Packages/User/Default (Linux).sublime-keymap",
 		"/home/jelmer/.config/sublime-text-3/Packages/Default/Preferences.sublime-settings"
 	],
 	"find":
@@ -129,9 +181,10 @@
 	},
 	"find_in_files":
 	{
-		"height": 0.0,
+		"height": 95.0,
 		"where_history":
 		[
+			"/home/jelmer/projects/online/node_modules/grunt-browser-sync"
 		]
 	},
 	"find_state":
@@ -139,6 +192,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"Mathias",
+			"grunt",
 			"copy",
 			"rest",
 			"name",
@@ -164,8 +219,138 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "index.htm",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 960,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								15,
+								15
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Solarized (Light).tmTheme",
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"word_wrap": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "sass/main.sass",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 274,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								274,
+								274
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Solarized (Light).tmTheme",
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "sass/_type.sass",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 194,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								189,
+								189
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Solarized (Light).tmTheme",
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "sass/_base.sass",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 126,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								126,
+								126
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Solarized (Light).tmTheme",
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -219,6 +404,14 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"type",
+				"sass/_type.sass"
+			],
+			[
+				"base",
+				"sass/_base.sass"
+			]
 		],
 		"width": 0.0
 	},
@@ -244,8 +437,8 @@
 	"show_minimap": true,
 	"show_open_files": true,
 	"show_tabs": true,
-	"side_bar_visible": true,
-	"side_bar_width": 172.0,
+	"side_bar_visible": false,
+	"side_bar_width": 194.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

@@ -1,0 +1,52 @@
+// ---------------------------------
+// Media queries
+// ---------------------------------
+
+$small: 360px
+$small-landscape: 480px
+$medium: 640px
+$large: 1000px
+
+@media screen and (min-width: $medium)
+	header
+		h1
+			float: left
+			width: 50%
+		
+		p
+			clear: both
+
+	nav
+		float: right
+		margin-top: 30px
+
+	article
+		p
+			font-size: 16px
+
+		div
+			background: $black
+			width: 35%
+
+@media screen and (min-width: $small-landscape)
+	article
+		ul,
+		ul.unstyled
+			display: block
+
+@media screen and (min-width: $large)
+	main
+		text-align: justify
+
+		&:after
+			content: ""
+			display: inline-block
+			width: 100%
+
+	article
+		text-align: left
+		display: inline-block
+		width: 47%
+
+		div
+			width: 65%

@@ -15,7 +15,8 @@ module.exports = function(grunt) {
 			},
 			dist: {
 				files: {
-					'dist/js/plugins.min.js': 'js/plugins.grande.js'
+					'dist/js/plugins.min.js': 'js/plugins.grande.js',
+					'dist/js/app.min.js': 'js/app.grande.js'
 				}
 			}
 		},
@@ -24,10 +25,19 @@ module.exports = function(grunt) {
 			dist: {
 				options: {
 					banner: '<%= banner %>',
-					style: 'compact'
+					style: 'expanded'
 				},
 				files: {
 					'dist/css/main.css' : 'sass/main.sass'
+				}
+			}
+		},
+
+		autoprefixer: {
+			dist: {
+				files: {'dist/css/main.css':'dist/css/main.css'},
+				options: {
+				  browsers: ['> 1%', 'last 3 versions', 'Firefox ESR', 'Opera 12.1']
 				}
 			}
 		},
@@ -38,7 +48,7 @@ module.exports = function(grunt) {
 					'sass/*.sass',
 					'sass/*.scss'
 				],
-				tasks: ['sass']
+				tasks: ['sass','autoprefixer']
 			},
 
 			js: {
@@ -62,7 +72,7 @@ module.exports = function(grunt) {
 
 		browserSync: {
 			files: {
-				src: ['dist/css/*.css', 'dist/index.htm']
+				src: ['dist/css/*.css', 'dist/index.htm','dist/js/*.js']
 			},
 			options: {
 				browser: 'google chrome',
@@ -80,6 +90,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-contrib-sass');
 	grunt.loadNpmTasks('grunt-contrib-copy');
+	grunt.loadNpmTasks('grunt-autoprefixer');
 	grunt.loadNpmTasks('grunt-browser-sync');
 
 	grunt.registerTask('default', ['browserSync','watch']);

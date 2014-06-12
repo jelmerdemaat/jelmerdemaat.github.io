@@ -1,9 +1,154 @@
+// ---------------------------------
+// Imports before code
+// ---------------------------------
+
 @import normalize, base, type
 
-html
-	font-family: "ff-enzo-web-1", "ff-enzo-web-2", sans-serif
-	font-weight: 300
-	font-style: normal
-	color: #333
 
-	background: hotpink
+// ---------------------------------
+// Main code
+// ---------------------------------
+
+*,
+*:before,
+*:after
+	box-sizing: border-box
+
+html
+	min-width: 360px
+	background: $white
+
+main
+	overflow: hidden
+
+.everything
+	width: 80%
+	max-width: 1100px
+	margin: auto
+	padding-bottom: 50px
+	overflow: hidden
+
+header
+	margin-top: 5vw
+	overflow: hidden
+	border-bottom: 1px solid $gray
+
+	h1
+		sub
+			bottom: 0
+
+	p
+		clear: both
+
+nav
+	margin-left: -5px
+	
+	ul,
+	ul.listleft
+		overflow: visible
+
+	a
+		padding: 5px 0
+		margin-right: 20px
+		margin-left: 5px
+
+article
+	margin-top: 40px
+	overflow: hidden
+
+	a
+		position: relative
+		display: block
+		border: 0
+
+		&:focus,
+		&:hover,
+		&:active
+			border: 0
+
+			div
+				z-index: 9
+				-webkit-transform: translateX(0)
+				transform: translateX(0)
+
+			ul
+				opacity: 1
+				transition: .3s .4s opacity ease-out
+
+	p
+		font-size: 14px
+		color: white
+	
+	div
+		padding: 20px
+		width: 90%
+
+		background: rgba($black, .8)
+
+		position: absolute
+		left: 0
+		bottom: 0
+		top: 0
+
+		-webkit-transform: translateX(-100%)
+		transform: translateX(-100%)
+		transition: .3s all ease-out
+
+	h2
+		margin: 0
+	
+	ul,
+	ul.unstyled,
+		display: none // mobile first
+
+		color: $white
+		font-size: 13px
+		font-weight: bold
+
+		opacity: 0
+		transition: .2s opacity ease-out
+		
+
+		li
+			margin-left: 15px
+			position: relative
+
+			&:before
+				color: $orange
+				line-height: 1
+				content: "*"
+				display: inline-block
+				position: absolute
+				top: 4px
+				left: -10px
+
+			&:first-child
+				margin-left: 0
+
+				&:before
+					display: none
+
+	img
+		width: 100%
+
+
+footer
+	text-align: right
+	border-top: 1px solid $black
+	padding-top: 20px
+
+	ul,
+	ul.unstyled
+		float: right
+		
+		li
+			margin-left: 15px
+	p
+		clear: both
+		padding-top: 5px
+
+// ---------------------------------
+// Imports after media
+// ---------------------------------	
+
+@import media
