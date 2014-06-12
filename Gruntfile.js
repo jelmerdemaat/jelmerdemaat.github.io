@@ -14,10 +14,10 @@ module.exports = function(grunt) {
 				banner: '<%= banner %>'
 			},
 			dist: {
-	      files: {
-	        'dist/js/plugins.min.js': 'js/plugins.grande.js'
-	      }
-	    }
+				files: {
+					'dist/js/plugins.min.js': 'js/plugins.grande.js'
+				}
+			}
 		},
 
 		sass: {
@@ -27,20 +27,28 @@ module.exports = function(grunt) {
 					style: 'compact'
 				},
 				files: {
-					'css/main.css' : 'sass/main.sass'
+					'dist/css/main.css' : 'sass/main.sass'
 				}
 			}
 		},
 
 		watch: {
-			all: {
+			sass: {
 				files: [
-					'*.htm',
-					'js/*.js',
 					'sass/*.sass',
 					'sass/*.scss'
 				],
-				tasks: ['default']
+				tasks: ['sass']
+			},
+
+			js: {
+				files: ['js/*.js'],
+				tasks: ['uglify']
+			},
+
+			content: {
+				files: ['*.htm'],
+				tasks: ['copy']
 			}
 		},
 		
@@ -50,14 +58,30 @@ module.exports = function(grunt) {
 				src: "./*.htm",
 				dest: "dist/"
 			}
+		},
+
+		browserSync: {
+			files: {
+				src: ['dist/css/*.css', 'dist/index.htm']
+			},
+			options: {
+				browser: 'google chrome',
+				watchTask: true,
+				server: {
+					baseDir: 'dist',
+					index: 'index.htm'
+				}
+			}
 		}
+
 	});
 
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-contrib-sass');
 	grunt.loadNpmTasks('grunt-contrib-copy');
+	grunt.loadNpmTasks('grunt-browser-sync');
 
-	grunt.registerTask('default', ['uglify','sass','copy']);
+	grunt.registerTask('default', ['browserSync','watch']);
 
 };

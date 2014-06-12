@@ -19,6 +19,22 @@
 				"Package Control: Install Package"
 			],
 			[
+				"fetch",
+				"Fetch: File"
+			],
+			[
+				"feth",
+				"Fetch: Manage"
+			],
+			[
+				"fet",
+				"Fetch: File"
+			],
+			[
+				"fetch f",
+				"Fetch: File"
+			],
+			[
 				"edit ser",
 				"SFTP: Edit Server…"
 			],
@@ -63,7 +79,7 @@
 				"Package Control: Install Package"
 			]
 		],
-		"width": 435.0
+		"width": 561.0
 	},
 	"console":
 	{
@@ -84,9 +100,21 @@
 	},
 	"file_history":
 	[
-		"/home/jelmer/projects/online/online.sublime-project",
+		"/home/jelmer/projects/online/Gruntfile.js",
+		"/home/jelmer/projects/online/sass/_type.sass",
+		"/home/jelmer/projects/online/sass/main.sass",
+		"/home/jelmer/projects/online/js/plugins.grande.js",
 		"/home/jelmer/projects/online/index.htm",
+		"/home/jelmer/projects/online/dist/css/main.css",
+		"/home/jelmer/.bashrc-backup",
+		"/home/jelmer/.bashrc",
+		"/home/jelmer/Downloads/base16-monokai.dark.sh",
+		"/home/jelmer/Downloads/solarized/osx-terminal.app-colors-solarized/README.md",
 		"/home/jelmer/projects/online/sass/_base.sass",
+		"/home/jelmer/projects/online/sass/_normalize.scss",
+		"/home/jelmer/projects/online/dist/index.htm",
+		"/home/jelmer/.config/sublime-text-3/Packages/User/Fetch.sublime-settings",
+		"/home/jelmer/projects/online/online.sublime-project",
 		"/home/jelmer/.config/sublime-text-3/Packages/User/sftp_servers/jelmerdemaat.nl",
 		"/home/jelmer/projects/wp-config.php",
 		"/home/jelmer/.config/sublime-text-3/Servers/jelmerdemaat.nl",
@@ -97,7 +125,7 @@
 	],
 	"find":
 	{
-		"height": 25.0
+		"height": 37.0
 	},
 	"find_in_files":
 	{
@@ -111,6 +139,11 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"copy",
+			"rest",
+			"name",
+			"usr",
+			"root",
 			"password",
 			"username",
 			"theme"
@@ -212,7 +245,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 244.0,
+	"side_bar_width": 172.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
