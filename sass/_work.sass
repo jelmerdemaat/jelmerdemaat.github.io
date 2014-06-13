@@ -1,0 +1,22 @@
+.animate-wrap
+	width: 100%
+	height: 100%
+	position: relative
+	-webkit-transform: translateX(0)
+	transform: translateX(0)
+	transition: .3s ease all
+
+	&.active
+		-webkit-transform: translateX(-100%)
+		transform: translateX(-100%)
+
+section
+	width: 100%
+	height: 100%
+	position: absolute
+	top: 0
+	left: 100%
+	background: $black
+
+	&.active
+		z-index: 99

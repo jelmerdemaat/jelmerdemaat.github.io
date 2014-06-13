@@ -15,8 +15,8 @@ module.exports = function(grunt) {
 			},
 			dist: {
 				files: {
-					'dist/js/plugins.min.js': 'js/plugins.grande.js',
-					'dist/js/app.min.js': 'js/app.grande.js'
+					'js/plugins.min.js': 'jsraw/plugins.grande.js',
+					'js/app.min.js': 'jsraw/app.grande.js'
 				}
 			}
 		},
@@ -25,7 +25,16 @@ module.exports = function(grunt) {
 			dist: {
 				options: {
 					banner: '<%= banner %>',
-					style: 'expanded'
+					style: 'compact'
+				},
+				files: {
+					'css/main.css' : 'sass/main.sass'
+				}
+			},
+			style: {
+				options: {
+					banner: '<%= banner %>',
+					style: 'compact'
 				},
 				files: {
 					'dist/css/main.css' : 'sass/main.sass'
@@ -33,9 +42,18 @@ module.exports = function(grunt) {
 			}
 		},
 
+		jekyll: {
+			options: {
+
+			},
+			dist: {
+
+			}
+		},
+
 		autoprefixer: {
 			dist: {
-				files: {'dist/css/main.css':'dist/css/main.css'},
+				files: {'css/main.css':'css/main.css'},
 				options: {
 				  browsers: ['> 1%', 'last 3 versions', 'Firefox ESR', 'Opera 12.1']
 				}
@@ -48,38 +66,47 @@ module.exports = function(grunt) {
 					'sass/*.sass',
 					'sass/*.scss'
 				],
-				tasks: ['sass','autoprefixer']
+				tasks: ['sass:dist','autoprefixer']
+			},
+
+			style: {
+				files: [
+					'sass/*.sass',
+					'sass/*.scss'
+				],
+				tasks: ['sass:style']
 			},
 
 			js: {
-				files: ['js/*.js'],
+				files: ['jsraw/**/*.js'],
 				tasks: ['uglify']
 			},
 
 			content: {
-				files: ['*.htm'],
-				tasks: ['copy']
+				files: [
+					'*.htm',
+					'*.html',
+					'_layouts/*.htm',
+					'_posts/*.htm',
+					'_posts/*.md',
+					'_includes/*.htm',
+					'css/*.css',
+					'js/**/*.js'
+				],
+				tasks: ['jekyll']
 			}
 		},
 		
-		copy: {
-			content: {
-				// expand: true,
-				src: "./*.htm",
-				dest: "dist/"
-			}
-		},
-
 		browserSync: {
 			files: {
-				src: ['dist/css/*.css', 'dist/index.htm','dist/js/*.js']
+				src: ['dist/css/*.css', 'dist/**/*.html','dist/js/*.js']
 			},
 			options: {
 				browser: 'google chrome',
 				watchTask: true,
 				server: {
-					baseDir: 'dist',
-					index: 'index.htm'
+					baseDir: 'dist/',
+					index: 'index.html'
 				}
 			}
 		}
@@ -89,10 +116,15 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-contrib-sass');
-	grunt.loadNpmTasks('grunt-contrib-copy');
+	grunt.loadNpmTasks('grunt-jekyll');
 	grunt.loadNpmTasks('grunt-autoprefixer');
 	grunt.loadNpmTasks('grunt-browser-sync');
 
-	grunt.registerTask('default', ['browserSync','watch']);
+	grunt.loadNpmTasks('grunt-notify');
+
+
+	grunt.registerTask('build', ['sass:dist','uglify','jekyll']);
+	grunt.registerTask('default', ['build','browserSync','watch']);
+	grunt.registerTask('style', ['build','browserSync','watch:style']);
 
 };

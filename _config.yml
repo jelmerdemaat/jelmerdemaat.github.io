@@ -1,10 +1,20 @@
 # Site settings
 title: Design and code
 email: post@jelmerdemaat.nl
-description: "Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description."
+description: ""
 baseurl: ""
 url: "http://jelmerdemaat.nl"
+exclude: [
+	"Gruntfile.js",
+	"*.sublime-*",
+	"node_modules",
+	"package.json",
+	"sass",
+	"jsraw"
+	]
+destination: "./dist"
+
 
 # Build settings
 markdown: kramdown
-permalink: pretty
+permalink: /:year/:title/

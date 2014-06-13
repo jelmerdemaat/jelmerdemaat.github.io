@@ -6,6 +6,7 @@ $small: 360px
 $small-landscape: 480px
 $medium: 640px
 $large: 1000px
+$huge: 1150px
 
 @media screen and (min-width: $medium)
 	header
@@ -26,7 +27,7 @@ $large: 1000px
 
 		div
 			background: $black
-			width: 35%
+			width: 37%
 
 @media screen and (min-width: $small-landscape)
 	article
@@ -35,7 +36,7 @@ $large: 1000px
 			display: block
 
 @media screen and (min-width: $large)
-	main
+	.layout-home main
 		text-align: justify
 
 		&:after
@@ -47,6 +48,17 @@ $large: 1000px
 		text-align: left
 		display: inline-block
 		width: 47%
+		
+		p
+			font-size: 14px
 
 		div
 			width: 65%
+
+@media screen and (min-width: $huge)
+	article
+		p
+			font-size: 16px
+
+		div
+			width: 50%

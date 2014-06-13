@@ -18,6 +18,11 @@ html
 	min-width: 360px
 	background: $white
 
+html,
+body
+	overflow-x: hidden
+	height: 100%
+
 main
 	overflow: hidden
 
@@ -36,6 +41,12 @@ header
 	h1
 		sub
 			bottom: 0
+		a,
+		a:focus,
+		a:hover,
+		a:active
+			color: inherit
+			border: 0
 
 	p
 		clear: both
@@ -75,6 +86,10 @@ article
 				opacity: 1
 				transition: .3s .4s opacity ease-out
 
+			img
+				-webkit-transform: translateX(5%)
+				transform: translateX(5%)
+
 	p
 		font-size: 14px
 		color: white
@@ -90,8 +105,8 @@ article
 		bottom: 0
 		top: 0
 
-		-webkit-transform: translateX(-100%)
-		transform: translateX(-100%)
+		-webkit-transform: translateX(-101%)
+		transform: translateX(-101%)
 		transition: .3s all ease-out
 
 	h2
@@ -130,6 +145,7 @@ article
 
 	img
 		width: 100%
+		transition: all .25s  ease-out
 
 
 footer
@@ -147,8 +163,11 @@ footer
 		clear: both
 		padding-top: 5px
 
+
+
 // ---------------------------------
-// Imports after media
+// Imports after main CSS
 // ---------------------------------	
 
-@import media
+@import work, media
+
