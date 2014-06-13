@@ -1,5 +1,5 @@
 grunt-browser-sync/
-_site
+dist/
 
 # Compiled source #
 ###################
@@ -46,7 +46,10 @@ Thumbs.db
  
 *.scssc
 *.sassc
+.scssc
+.sassc
 .sass-cache/
+/.sass-cache/
  
  
 # Guard #
