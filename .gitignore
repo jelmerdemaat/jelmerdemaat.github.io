@@ -1,5 +1,6 @@
 grunt-browser-sync/
 dist/
+*.sublime-workspace
 
 # Compiled source #
 ###################
