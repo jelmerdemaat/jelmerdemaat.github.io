@@ -1,7 +1,10 @@
 // Functional code
 
 var activeClass = 'active',
-		$animateWrap = $('.animate-wrap');
+		$allWork = $('section'),
+		$animateWrap = $('.animate-wrap'),
+		$workMenu = $('menu'),
+		$btnClose = $('#button-close');
 
 $(function() {
 
@@ -13,6 +16,18 @@ $(function() {
 
 		$animateWrap.toggleClass(activeClass);
 		$('section[data-work-id="' + id + '"]').toggleClass(activeClass);
+
+	});
+
+	$workMenu.on('click', $btnClose, function(e) {
+		console.log('close');
+		e.preventDefault();
+		closeWork();
 	});
 
 });
+
+function closeWork() {
+	$animateWrap.removeClass(activeClass);
+	$allWork.removeClass(activeClass);	
+}

@@ -9,6 +9,7 @@
 	&.active
 		-webkit-transform: translateX(-100%)
 		transform: translateX(-100%)
+		background: $black
 
 section
 	width: 100%
@@ -20,3 +21,18 @@ section
 
 	&.active
 		z-index: 99
+
+
+menu
+	position: absolute
+	top: 0
+	left: 100%
+	z-index: 99
+	margin: 0
+	padding: 15px
+	background: darken($black, 3%)
+	width: 100%
+
+	a
+		color: white
+		text-decoration: none

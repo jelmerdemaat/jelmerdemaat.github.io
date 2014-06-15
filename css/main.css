@@ -1,4 +1,4 @@
-/*! Jelmer - v0.1.0 - 2014-06-13
+/*! Jelmer - v0.1.0 - 2014-06-15
 * Copyright (c) 2014 Jelmer de Maat */
 
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
@@ -196,10 +196,13 @@ footer ul li, footer ul.unstyled li { margin-left: 15px; }
 footer p { clear: both; padding-top: 5px; }
 
 .animate-wrap { width: 100%; height: 100%; position: relative; -webkit-transform: translateX(0); -ms-transform: translateX(0); transform: translateX(0); -webkit-transition: 0.3s ease all; transition: 0.3s ease all; }
-.animate-wrap.active { -webkit-transform: translateX(-100%); -ms-transform: translateX(-100%); transform: translateX(-100%); }
+.animate-wrap.active { -webkit-transform: translateX(-100%); -ms-transform: translateX(-100%); transform: translateX(-100%); background: #444444; }
 
 section { width: 100%; height: 100%; position: absolute; top: 0; left: 100%; background: #444444; }
 section.active { z-index: 99; }
+
+menu { position: absolute; top: 0; left: 100%; z-index: 99; margin: 0; padding: 15px; background: #3c3c3c; width: 100%; }
+menu a { color: white; text-decoration: none; }
 
 @media screen and (min-width: 640px) { header h1 { float: left; width: 50%; }
   header p { clear: both; }
