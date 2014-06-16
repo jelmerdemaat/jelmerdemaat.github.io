@@ -12,10 +12,10 @@ permalink: /
 		<div>
 			<h2>{{ post.title }}</h2>
 			<p>{{ post.excerpt}}</p>
-			<ul class="unstyled listleft">
-				<li>Web</li>
-				<li>UI</li>
-				<li>Mobile</li>
+			<ul class="unstyled listleft post-tags">
+			{% for tag in post.tags %}
+				<li>{{ tag }}</li>
+			{% endfor %}
 			</ul>
 		</div>
 		<img src="http://placeimg.com/640/400/tech" alt="Work">
@@ -23,7 +23,18 @@ permalink: /
 </article>
 
 <section class="work" data-work-id="{{ post.id }}">
-	{{ post.content }}
+	<div class="post-content">
+		<h2>{{ post.title }}</h2>
+		<ul class="unstyled listleft post-tags">
+		{% for tag in post.tags %}
+			<li>{{ tag }}</li>
+		{% endfor %}
+		{% if post.external_link %}
+			<li class="post-external-link"><a href="{{ post.external_link }}">{{ post.external_link }}</a></li>
+		{% endif %}
+		</ul>
+		{{ post.content }}
+	</div>
 </section>
 
 {% endfor %}

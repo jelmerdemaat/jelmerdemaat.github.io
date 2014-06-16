@@ -25,7 +25,7 @@ module.exports = function(grunt) {
 			dist: {
 				options: {
 					banner: '<%= banner %>',
-					style: 'compact'
+					style: 'compressed'
 				},
 				files: {
 					'css/main.css' : 'sass/main.sass'
@@ -34,7 +34,7 @@ module.exports = function(grunt) {
 			style: {
 				options: {
 					banner: '<%= banner %>',
-					style: 'compact'
+					style: 'compressed'
 				},
 				files: {
 					'dist/css/main.css' : 'sass/main.sass'
@@ -106,7 +106,8 @@ module.exports = function(grunt) {
 				watchTask: true,
 				server: {
 					baseDir: 'dist/',
-					index: 'index.html'
+					index: 'index.html',
+					host: '192.168.0.108'
 				}
 			}
 		}

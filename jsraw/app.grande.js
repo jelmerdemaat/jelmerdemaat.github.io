@@ -6,9 +6,9 @@ var activeClass = 'active',
 		$workMenu = $('menu'),
 		$btnClose = $('#button-close');
 
-$(function() {
+$(window).ready(function() {
 
-	$('article a').on('click', function(e) {
+	$('article').on('click', 'a', function(e) {
 		e.preventDefault();
 
 		$this = $(this),
@@ -17,15 +17,16 @@ $(function() {
 		$animateWrap.toggleClass(activeClass);
 		$('section[data-work-id="' + id + '"]').toggleClass(activeClass);
 
+		window.scrollTo(0,0);
+
 	});
 
 	$workMenu.on('click', $btnClose, function(e) {
-		console.log('close');
 		e.preventDefault();
 		closeWork();
 	});
 
-});
+}); // doc.ready
 
 function closeWork() {
 	$animateWrap.removeClass(activeClass);
