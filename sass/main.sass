@@ -24,14 +24,23 @@ body
 	overflow-x: hidden
 	// height: 100%
 
+.everything,
+header,
+main,
+footer
+	margin: auto
+
+header,
+footer
+	width: $site-width
+	max-width: $site-max-width
+
 main
 	overflow: hidden
 	padding: 5vw 0
+	max-width: $site-max-width
 
 .everything
-	width: $site-width
-	max-width: $site-max-width
-	margin: auto
 	padding-bottom: 50px
 	overflow: hidden
 
@@ -138,12 +147,6 @@ footer
 	color: lighten($black, 20%)
 	font-size: 14px
 	text-align: right
-	padding-top: 20px
-	margin-top: 20px
-
-	p
-		clear: both
-		padding-top: 5px
 
 
 

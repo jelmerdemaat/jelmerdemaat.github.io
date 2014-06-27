@@ -102,13 +102,12 @@ module.exports = function(grunt) {
 				src: ['dist/css/*.css', 'dist/**/*.html','dist/js/*.js']
 			},
 			options: {
-				browser: 'google chrome',
+				// browser: 'google chrome',
 				watchTask: true,
 				debugInfo: true,
 				server: {
 					baseDir: 'dist/',
-					index: 'index.html',
-					host: '192.168.0.108'
+					index: 'index.html'
 				}
 			}
 		}
