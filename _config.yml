@@ -13,6 +13,7 @@ exclude: [
 	"jsraw"
 	]
 destination: "./dist"
+plugins: "./_plugins"
 
 
 # Build settings

@@ -52,23 +52,11 @@ header
 	p
 		clear: both
 
-nav
-	margin-left: -5px
-	height: 30px
-	
-	ul,
-	ul.listleft
-		overflow: visible
-		height: 30px
-
-	a
-		padding: 5px 0
-		margin-right: 20px
-		margin-left: 5px
 
 article
 	margin-top: 40px
 	overflow: hidden
+	background: black
 
 	a
 		position: relative
@@ -101,7 +89,8 @@ article
 		padding: 20px
 		width: 70%
 
-		background: $black
+		background: black
+		background: rgba(black, .85)
 
 		position: absolute
 		left: 0
@@ -149,17 +138,13 @@ article
 				display: none
 
 footer
+	color: lighten($black, 20%)
+	font-size: 14px
 	text-align: right
 	border-top: 1px solid $lightgray
 	padding-top: 20px
 	margin-top: 20px
 	
-	ul,
-	ul.unstyled
-		float: right
-		
-		li
-			margin-left: 15px
 	p
 		clear: both
 		padding-top: 5px

@@ -4,9 +4,7 @@ title: Design and code | Jelmer de Maat
 navtitle: Home
 permalink: /
 ---
-
 {% for post in site.posts %}
-
 <article>
 	<a href="{{ post.url }}" data-post-id="{{ post.id }}">
 		<div>
@@ -20,8 +18,7 @@ permalink: /
 		</div>
 		<img src="http://placeimg.com/640/400/tech" alt="Work">
 	</a>
-</article>
-
+</article>&#32;
 <section class="work" data-work-id="{{ post.id }}">
 	<div class="post-content">
 		<h2>{{ post.title }}</h2>
@@ -36,5 +33,4 @@ permalink: /
 		{{ post.content }}
 	</div>
 </section>
-
 {% endfor %}
