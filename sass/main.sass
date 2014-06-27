@@ -26,6 +26,7 @@ body
 
 main
 	overflow: hidden
+	padding: 5vw 0
 
 .everything
 	width: $site-width
@@ -37,7 +38,6 @@ main
 header
 	margin-top: 5vw
 	overflow: hidden
-	border-bottom: 1px solid $lightgray
 
 	h1
 		sub
@@ -54,9 +54,7 @@ header
 
 
 article
-	margin-top: 40px
 	overflow: hidden
-	background: black
 
 	a
 		position: relative
@@ -84,10 +82,9 @@ article
 	p
 		font-size: 14px
 		color: white
-	
+
 	div
 		padding: 20px
-		width: 70%
 
 		background: black
 		background: rgba(black, .85)
@@ -103,7 +100,7 @@ article
 
 	h2
 		margin: 0
-	
+
 	ul,
 	ul.unstyled
 		color: $white
@@ -141,10 +138,9 @@ footer
 	color: lighten($black, 20%)
 	font-size: 14px
 	text-align: right
-	border-top: 1px solid $lightgray
 	padding-top: 20px
 	margin-top: 20px
-	
+
 	p
 		clear: both
 		padding-top: 5px
@@ -153,7 +149,7 @@ footer
 
 // ---------------------------------
 // Imports after main CSS
-// ---------------------------------	
+// ---------------------------------
 
 @import work, media
 

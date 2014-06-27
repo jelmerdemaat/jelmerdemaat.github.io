@@ -96,7 +96,7 @@ module.exports = function(grunt) {
 				tasks: ['jekyll']
 			}
 		},
-		
+
 		browserSync: {
 			files: {
 				src: ['dist/css/*.css', 'dist/**/*.html','dist/js/*.js']
@@ -104,6 +104,7 @@ module.exports = function(grunt) {
 			options: {
 				browser: 'google chrome',
 				watchTask: true,
+				debugInfo: true,
 				server: {
 					baseDir: 'dist/',
 					index: 'index.html',
