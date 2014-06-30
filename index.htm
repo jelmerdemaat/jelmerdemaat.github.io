@@ -30,7 +30,7 @@ permalink: /
 					<li>{{ tag }}</li>
 				{% endfor %}
 				{% if post.external_link %}
-					<li class="post-external-link"><a href="{{ post.external_link }}">{{ post.external_link }}</a></li>
+					<li class="post-external-link"><a href="{{ post.external_link }}">{{ post.clean_link_title }}</a></li>
 				{% endif %}
 			</ul>
 			{{ post.content }}

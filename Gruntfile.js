@@ -102,6 +102,7 @@ module.exports = function(grunt) {
 				browser: 'google chrome',
 				watchTask: true,
 				debugInfo: true,
+				tunnel: true,
 				server: {
 					baseDir: 'dist/',
 					index: 'index.html'
