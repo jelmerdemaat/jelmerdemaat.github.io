@@ -101,10 +101,11 @@ module.exports = function(grunt) {
 			options: {
 				browser: 'google chrome',
 				watchTask: true,
-				debugInfo: true,
-				tunnel: true,
+				// debugInfo: true,
+				// tunnel: true,
 				server: {
 					baseDir: 'dist/',
+					port: 3000,
 					index: 'index.html'
 				}
 			}

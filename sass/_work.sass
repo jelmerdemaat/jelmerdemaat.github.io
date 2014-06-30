@@ -49,15 +49,14 @@ section
 menu
 	position: fixed
 	top: 0
-	left: 100%
+	left: 0
 	z-index: 99
 	margin: 0
 	padding: 0
 
 	opacity: 0
 
-
-	+trans(.3, .2, $easing1)
+	+trans(.3)
 
 	a
 		padding: 11px 15px
@@ -66,4 +65,5 @@ menu
 
 	.animate-wrap.active + &
 		opacity: 1
-		left: 0
+		+trans(.3, .3)
+
