@@ -1,3 +1,14 @@
-<div class="post-content">
+{% include header.htm %}
+
+	<h2>{{ page.title }}</h2>
+	<ul class="unstyled listleft post-tags">
+		{% for tag in page.tags %}
+			<li>{{ tag }}</li>
+		{% endfor %}
+		{% if page.external_link %}
+			<li class="post-external-link"><a href="{{ post.external_link }}">{{ post.external_link }}</a></li>
+		{% endif %}
+	</ul>
 	{{ content }}
-</div>
+
+{% include footer.htm %}

@@ -5,6 +5,17 @@
 $site-width: 80%
 $site-max-width: 900px
 
+$easing1: cubic-bezier(0.645, 0.045, 0.355, 1.000)
+
+/*
+ * JAC Facit
+ * https://typekit.com/fonts/jaf-facitweb
+ *
+ * Light:	"jaf-facitweb-1", "jaf-facitweb-2", 300,	normal/italic
+ * Bold:	"jaf-facitweb-1", "jaf-facitweb-2", 700,	normal/italic
+ */
+$bodystack: "jaf-facitweb-1", "jaf-facitweb-2", sans-serif
+$headingstack: "jaf-facitweb-1", "jaf-facitweb-2", sans-serif
 
 // ---------------------------------
 // COLORS
@@ -31,7 +42,7 @@ $orange: darken(orange, 6%)
 .listleft,
 .listright
 	overflow: hidden
-	
+
 	li
 		float: left
 
@@ -62,3 +73,13 @@ $orange: darken(orange, 6%)
  */
 .cf
 	*zoom: 1
+
+
+
+
+// ---------------------------------
+// SASS mixins
+// ---------------------------------
+
+=trans($time: 0.2, $delay: 0, $ease: ease-in-out, $prop: all)
+	transition: $prop $time + s $delay + s $ease

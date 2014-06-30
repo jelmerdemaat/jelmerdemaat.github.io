@@ -3,29 +3,31 @@
 // ---------------------------------
 
 $small: 480px
-$medium: 640px
-$large: 1000px
-$huge: 1150px
+$medium: 768px
+$large: 900px
+$huge: 1300px
 
 
 @media screen and (min-width: $small)
 
+
 @media screen and (min-width: $medium)
-	header
-		h1
-			float: left
-			width: 50%
+	article
+		width: 50%
+		float: left
+
+		div
+			padding: 1vw 3vw
 
 		p
-			clear: both
-
-	nav
-		float: right
-		margin-top: 30px
-
+			font-size: 14px
+			padding: 0 3vw
 
 @media screen and (min-width: $large)
-
+	article
+		p
+			font-size: 16px
 
 @media screen and (min-width: $huge)
-
+	// article
+	// 	width: 33.3333%

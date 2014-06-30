@@ -1,10 +1,12 @@
 html
 	color: $black
 
-	font-family: "ff-enzo-web-1", "ff-enzo-web-2", sans-serif
+	font-size: 16px
+	font-family: $bodystack
 	font-weight: 300
 	font-style: normal
-	line-height: 1.45
+	line-height: 1.5
+
 
 h1,
 h2,
@@ -12,16 +14,18 @@ h3,
 h4,
 h5,
 h6
-	font-family: "bree-1","bree-2", sans-serif
+	font-weight: 300
 	margin-bottom: 10px
 
 	a
 		color: inherit
+		font-weight: inherit
 
 a
 	color: $orange
 	text-decoration: none
-	transition: .2s all ease-out
+	font-weight: 600
+	+trans(.2)
 
 	border-bottom: 1px solid transparent
 
@@ -34,6 +38,9 @@ a
 p
 	word-break: break-word
 	hyphens: auto
+
+strong
+	font-weight: 600
 
 img
 	max-width: 100%
@@ -59,15 +66,29 @@ nav
 	font-size: 18px
 
 article
+	text-align: center
+
 	h2
 		color: white
-		font-size: 17px
+		font-size: 24px
 		text-transform: uppercase
+
+	a
+		font-weight: normal
+
 
 	div
 		text-shadow: 1px 1px 0 #444
 
-section
+	p
+		font-size: 15px
+		color: white
+
+	ul,
+	ul.unstyled
+		color: $white
+		font-size: 14px
+		font-weight: 600
 
 
 menu
@@ -83,3 +104,8 @@ menu
 		&:hover,
 		&:active
 			border: 0
+
+.work
+	.post-tags
+		font-size: 14px
+		font-weight: 600

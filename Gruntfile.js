@@ -15,7 +15,6 @@ module.exports = function(grunt) {
 			},
 			dist: {
 				files: {
-					'js/plugins.min.js': 'jsraw/plugins.grande.js',
 					'js/app.min.js': 'jsraw/app.grande.js'
 				}
 			}
@@ -102,7 +101,7 @@ module.exports = function(grunt) {
 				src: ['dist/css/*.css', 'dist/**/*.html','dist/js/*.js']
 			},
 			options: {
-				// browser: 'google chrome',
+				browser: 'google chrome',
 				watchTask: true,
 				debugInfo: true,
 				server: {
