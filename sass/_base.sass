@@ -17,6 +17,9 @@ $easing1: cubic-bezier(0.645, 0.045, 0.355, 1.000)
 $bodystack: "jaf-facitweb-1", "jaf-facitweb-2", sans-serif
 $headingstack: "jaf-facitweb-1", "jaf-facitweb-2", sans-serif
 
+
+
+
 // ---------------------------------
 // COLORS
 // ---------------------------------
@@ -26,6 +29,7 @@ $black: #444
 $gray: #666
 $lightgray: #BBB
 $orange: darken(orange, 6%)
+
 
 
 
@@ -82,4 +86,6 @@ $orange: darken(orange, 6%)
 // ---------------------------------
 
 =trans($time: 0.2, $delay: 0, $ease: ease-in-out, $prop: all)
+	-webkit-transition: $prop $time + s $delay + s $ease
+	-moz-transition: $prop $time + s $delay + s $ease
 	transition: $prop $time + s $delay + s $ease
