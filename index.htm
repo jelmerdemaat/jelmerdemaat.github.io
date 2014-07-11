@@ -9,7 +9,7 @@ permalink: /
 
 	<article>
 		<a href="{{ post.url }}" data-post-id="{{ post.id }}">
-			<div>
+			<div {% if post.color %}class="color-{{ post.color }}"{% endif %}>
 				<h2>{{ post.title }}</h2>
 				{{ post.excerpt}}
 				<ul class="unstyled listleft post-tags">
@@ -18,7 +18,7 @@ permalink: /
 					{% endfor %}
 				</ul>
 			</div>
-			<img src="{{ post.featured_image }}" alt="{{ post.featured_image_alt }}">
+			<img src="../images/{{ post.featured_image }}" alt="{{ post.featured_image_alt }}">
 		</a>
 	</article>
 

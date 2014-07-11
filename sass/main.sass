@@ -87,15 +87,27 @@ article
 			border: 0
 
 			div
-				background: darken($orange, 35%)
-				background: rgba(darken($orange, 35%), .6)
+				$bg-darken: 35%
+				$bg-hover-opacity: 0.8
 
-				// box-shadow: inset 0 -100px 0 -100px rgba(black,.5)
+				background: darken($orange, $bg-darken)
+				background: rgba(darken($orange, $bg-darken), $bg-hover-opacity)
+
+				&.color-red
+					background: darken($red, $bg-darken)
+					background: rgba(darken($red, $bg-darken), $bg-hover-opacity)
+
+				&.color-blue
+					background: darken($blue, $bg-darken)
+					background: rgba(darken($blue, $bg-darken), $bg-hover-opacity)
+
+				&.color-green
+					background: darken($green, $bg-darken)
+					background: rgba(darken($green, $bg-darken), $bg-hover-opacity)
 
 			h2
 				padding: 15px 0
 				border-color: rgba(white, .8)
-
 
 			ul
 				opacity: 1
@@ -122,11 +134,25 @@ article
 		+trans(.25, .1, $easing1)
 
 	div
+		$bg-opacity: 0.6
+
 		padding: 20px
 		padding: 6vw
 
-		background: darken($orange, 15%)
-		background: rgba(darken($orange, 15%), .3)
+		background: $orange
+		background: rgba($orange, $bg-opacity)
+
+		&.color-red
+			background: $red
+			background: rgba($red, $bg-opacity)
+
+		&.color-blue
+			background: $blue
+			background: rgba($blue, $bg-opacity)
+
+		&.color-green
+			background: $green
+			background: rgba($green, $bg-opacity)
 
 		position: absolute
 		top: 0

@@ -63,7 +63,7 @@ module.exports = function(grunt) {
 					'sass/*.sass',
 					'sass/*.scss'
 				],
-				tasks: ['sass:dist','autoprefixer']
+				tasks: ['newer:sass:dist','autoprefixer']
 			},
 
 			style: {
@@ -71,12 +71,12 @@ module.exports = function(grunt) {
 					'sass/*.sass',
 					'sass/*.scss'
 				],
-				tasks: ['sass:style']
+				tasks: ['newer:sass:style']
 			},
 
 			js: {
 				files: ['jsraw/**/*.js'],
-				tasks: ['uglify']
+				tasks: ['newer:uglify']
 			},
 
 			content: {
@@ -120,10 +120,10 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-autoprefixer');
 	grunt.loadNpmTasks('grunt-browser-sync');
 
+	grunt.loadNpmTasks('grunt-newer');
 	grunt.loadNpmTasks('grunt-notify');
 
-
-	grunt.registerTask('build', ['sass:dist','uglify','jekyll']);
+	grunt.registerTask('build', ['newer:sass:dist','newer:uglify','newer:jekyll']);
 	grunt.registerTask('default', ['build','browserSync','watch']);
 	grunt.registerTask('style', ['build','browserSync','watch:style']);
 
