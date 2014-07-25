@@ -1,3 +1,5 @@
+@import normalize-opentype
+
 html
 	color: $black
 
@@ -7,6 +9,7 @@ html
 	font-style: normal
 	line-height: 1.55
 
+	font-variant-ligatures: common-ligatures
 
 h1,
 h2,
@@ -85,8 +88,8 @@ article
 		color: white
 		font-size: 26px
 		font-weight: 600
-		text-transform: uppercase
-		text-shadow: 0 0 15px rgba(black, 0.9), 1px 1px 0 #444
+		// text-transform: uppercase
+		text-shadow: 0 0 10px rgba(black, 0.8), 1px 1px 0 #444
 
 	a
 		font-weight: normal
@@ -105,6 +108,8 @@ article
 		font-size: 14px
 		font-weight: 600
 
+.lowercase
+	text-transform: lowercase
 
 menu
 	font-size: 30px

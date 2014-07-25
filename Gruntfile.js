@@ -13,7 +13,8 @@ module.exports = function(grunt) {
 			},
 			dist: {
 				files: {
-					'js/app.min.js': 'jsraw/app.grande.js'
+					'js/app.min.js': 'jsraw/app.grande.js',
+					'js/vendor/fitvids.js': 'jsraw/vendor/fitvids.js'
 				}
 			}
 		},
@@ -63,7 +64,7 @@ module.exports = function(grunt) {
 					'sass/*.sass',
 					'sass/*.scss'
 				],
-				tasks: ['newer:sass:dist','autoprefixer']
+				tasks: ['sass:dist','autoprefixer']
 			},
 
 			style: {
@@ -71,12 +72,12 @@ module.exports = function(grunt) {
 					'sass/*.sass',
 					'sass/*.scss'
 				],
-				tasks: ['newer:sass:style']
+				tasks: ['sass:style']
 			},
 
 			js: {
 				files: ['jsraw/**/*.js'],
-				tasks: ['newer:uglify']
+				tasks: ['uglify']
 			},
 
 			content: {
@@ -101,7 +102,7 @@ module.exports = function(grunt) {
 			options: {
 				browser: 'google chrome',
 				watchTask: true,
-				// debugInfo: true,
+				debugInfo: true,
 				// tunnel: true,
 				server: {
 					baseDir: 'dist/',
@@ -123,7 +124,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-newer');
 	grunt.loadNpmTasks('grunt-notify');
 
-	grunt.registerTask('build', ['newer:sass:dist','newer:uglify','newer:jekyll']);
+	grunt.registerTask('build', ['sass:dist','newer:uglify','newer:jekyll']);
 	grunt.registerTask('default', ['build','browserSync','watch']);
 	grunt.registerTask('style', ['build','browserSync','watch:style']);
 

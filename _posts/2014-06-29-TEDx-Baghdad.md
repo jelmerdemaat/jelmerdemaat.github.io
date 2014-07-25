@@ -1,6 +1,6 @@
 ---
 layout: post
-title: TEDx Baghdad
+title: TED<span class="lowercase">x</span> Baghdad
 tags: [Interaction, Programming, Extracurricular]
 featured_image: tedx-installation.jpg
 featured_image_alt: Creating interactive installations for TEDx Baghdad.

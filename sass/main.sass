@@ -37,11 +37,6 @@ footer
 	h1
 		margin: 1% auto 5% auto
 
-	img
-		width: 90px
-		border-radius: 50%
-		float: left
-		margin-right: 3%
 
 main
 	overflow: hidden
@@ -69,6 +64,20 @@ header
 	p
 		clear: both
 
+	& > a
+		display: inline-block
+		float: left
+		margin-right: 3%
+
+		&:link,
+		&:focus,
+		&:hover,
+		&:active
+			border: 0
+
+	img
+		width: 90px
+		border-radius: 50%
 
 article
 	border-right: 1px solid white
@@ -126,7 +135,7 @@ article
 		position: absolute
 		left: 0
 		right: 0
-		bottom: 30px
+		bottom: 20px
 
 		-webkit-transform: translate3d(0, 40%, 0)
 		transform: translate3d(0, 40%, 0)
@@ -167,8 +176,6 @@ article
 		padding: 40px 0
 		border-bottom: 1px solid transparent
 
-		// -webkit-transform: translate3d(0, 0, 0)
-		// transform: translate3d(0, 0, 0)
 		+trans(.25)
 
 	ul,
@@ -181,8 +188,6 @@ article
 
 	img
 		width: 100%
-		max-width: 450px
-		max-height: 295px
 
 .post-tags
 	li

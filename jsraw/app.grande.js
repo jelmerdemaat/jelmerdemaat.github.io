@@ -26,9 +26,11 @@ $(window).ready(function() {
 		closeWork();
 	});
 
+	$('.video-container').fitVids();
+
 }); // doc.ready
 
 function closeWork() {
 	$animateWrap.removeClass(activeClass);
-	$allWork.removeClass(activeClass);	
+	$allWork.removeClass(activeClass);
 }
