@@ -5,12 +5,12 @@ description: ""
 baseurl: ""
 url: "http://jelmerdemaat.nl"
 exclude: [
-	"Gruntfile.js",
-	"*.sublime-*",
-	"node_modules",
-	"package.json",
-	"sass",
-	"jsraw"
+		"Gruntfile.js",
+		"*.sublime-*",
+		"node_modules",
+		"package.json",
+		"sass",
+		"jsraw"
 	]
 destination: "./dist"
 plugins: "./_plugins"

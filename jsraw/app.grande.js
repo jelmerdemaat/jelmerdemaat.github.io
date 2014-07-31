@@ -1,5 +1,3 @@
-// Functional code
-
 var activeClass = 'active',
 		$allWork = $('section'),
 		$animateWrap = $('.animate-wrap'),

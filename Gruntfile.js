@@ -55,6 +55,12 @@ module.exports = function(grunt) {
 				options: {
 				  browsers: ['> 1%', 'last 3 versions', 'Firefox ESR', 'Opera 12.1']
 				}
+			},
+			style: {
+				files: {'dist/css/main.css':'dist/css/main.css'},
+				options: {
+				  browsers: ['> 1%', 'last 3 versions', 'Firefox ESR', 'Opera 12.1']
+				}
 			}
 		},
 
@@ -64,7 +70,7 @@ module.exports = function(grunt) {
 					'sass/*.sass',
 					'sass/*.scss'
 				],
-				tasks: ['sass:dist','autoprefixer']
+				tasks: ['sass:dist','autoprefixer:dist']
 			},
 
 			style: {
@@ -72,7 +78,7 @@ module.exports = function(grunt) {
 					'sass/*.sass',
 					'sass/*.scss'
 				],
-				tasks: ['sass:style']
+				tasks: ['sass:style','autoprefixer:style']
 			},
 
 			js: {
