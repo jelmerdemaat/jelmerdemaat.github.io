@@ -9,10 +9,15 @@ $huge: 1300px
 
 
 @media screen and (min-width: $small)
+	.small-left
+		float: left
+	.small-right
+		float: right
 
 
 @media screen and (min-width: $medium)
 	article
+		margin: 0
 		width: 50%
 		float: left
 
@@ -27,12 +32,33 @@ $huge: 1300px
 			max-width: 450px
 			max-height: 295px
 
+	header
+		h1
+			width: 50%
+			float: left
+
+	.main-nav
+		li
+			float: none
+			margin: 0
+
+	.medium-left
+		float: left
+	.medium-right
+		float: right
 
 @media screen and (min-width: $large)
 	article
 		p
 			font-size: 16px
 
+	.large-left
+		float: left
+	.large-right
+		float: right
+
 @media screen and (min-width: $huge)
-	// article
-	// 	width: 33.3333%
+	.huge-right
+		float: right
+	.huge-left
+		float: left

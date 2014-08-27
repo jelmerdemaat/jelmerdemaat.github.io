@@ -14,9 +14,9 @@ $easing1: cubic-bezier(0.645, 0.045, 0.355, 1.000)
  * Light:	"jaf-facitweb-1", "jaf-facitweb-2", 300,	normal/italic
  * Bold:	"jaf-facitweb-1", "jaf-facitweb-2", 700,	normal/italic
  */
+
 $bodystack: "jaf-facitweb-1", "jaf-facitweb-2", sans-serif
 $headingstack: "jaf-facitweb-1", "jaf-facitweb-2", sans-serif
-
 
 
 
@@ -32,62 +32,3 @@ $orange: darken(orange, 6%)
 $red: #C00
 $blue: #09A
 $green: #61A03F
-
-
-
-// ---------------------------------
-// REUSABLE CLASSES
-// ---------------------------------
-
-.unstyled,
-.unstyled li
-	margin: 0
-	padding: 0
-	list-style: none
-
-.listleft,
-.listright
-	overflow: hidden
-
-	li
-		float: left
-
-
-/**
- * Source: http://nicolasgallagher.com/micro-clearfix-hack/
- *
- * For modern browsers
- * 1. The space content is one way to avoid an Opera bug when the
- *    contenteditable attribute is included anywhere else in the document.
- *    Otherwise it causes space to appear at the top and bottom of elements
- *    that are clearfixed.
- * 2. The use of `table` rather than `block` is only necessary if using
- *    `:before` to contain the top-margins of child elements.
- */
-
-.cf:before,
-.cf:after
-	content: " " /* 1 */
-	display: table /* 2 */
-
-.cf:after
-	clear: both
-
-/**
- * For IE 6/7 only
- * Include this rule to trigger hasLayout and contain floats.
- */
-.cf
-	*zoom: 1
-
-
-
-
-// ---------------------------------
-// SASS mixins
-// ---------------------------------
-
-=trans($time: 0.2, $delay: 0, $ease: ease-in-out, $prop: all)
-	-webkit-transition: $prop $time + s $delay + s $ease
-	-moz-transition: $prop $time + s $delay + s $ease
-	transition: $prop $time + s $delay + s $ease

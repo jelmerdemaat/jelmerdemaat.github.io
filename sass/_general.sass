@@ -1,0 +1,75 @@
+// ---------------------------------
+// General
+// ---------------------------------
+
+*,
+*:before,
+*:after
+	box-sizing: border-box
+
+html
+	background: $white
+
+html,
+body
+	min-width: 480px
+	overflow-x: hidden
+	height: 100%
+
+.everything,
+header,
+main,
+footer
+	margin: auto
+
+header,
+footer
+	width: $site-width
+	max-width: $site-max-width
+
+
+main
+	overflow: hidden
+	padding: 5vw 0
+	max-width: $site-max-width
+
+.everything
+	padding-bottom: 50px
+	overflow: hidden
+
+
+
+// ---------------------------------
+// Reuseable classes
+// ---------------------------------
+
+.unstyled,
+.unstyled li
+	margin: 0
+	padding: 0
+	list-style: none
+
+.listleft
+	overflow: hidden
+
+	li
+		float: left
+
+// Clearfix
+// Source: http://nicolasgallagher.com/micro-clearfix-hack/
+
+.cf:before,
+.cf:after
+	content: " "
+	display: table
+
+.cf:after
+	clear: both
+
+.cf
+	*zoom: 1
+
+.left
+	float: left
+.right
+	float: right

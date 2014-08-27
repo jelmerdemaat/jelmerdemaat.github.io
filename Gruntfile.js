@@ -31,8 +31,8 @@ module.exports = function(grunt) {
 			},
 			style: {
 				options: {
-					banner: '<%= banner %>',
-					style: 'compressed'
+					sourcemap: 'auto',
+					style: 'compact'
 				},
 				files: {
 					'dist/css/main.css' : 'sass/main.sass'

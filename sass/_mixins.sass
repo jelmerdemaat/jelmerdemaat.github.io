@@ -1,0 +1,8 @@
+// ---------------------------------
+// SASS mixins
+// ---------------------------------
+
+=trans($time: 0.2, $delay: 0, $ease: ease-in-out, $prop: all)
+	-webkit-transition: $prop $time + s $delay + s $ease
+	-moz-transition: $prop $time + s $delay + s $ease
+	transition: $prop $time + s $delay + s $ease

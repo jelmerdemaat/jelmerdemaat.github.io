@@ -6,19 +6,46 @@
 	<meta name="description" content="Design and code by Jelmer de Maat">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>{{ page.title }}</title>
-	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/main.css">
 	<script type="text/javascript" src="//use.typekit.net/pec8lcm.js"></script>
 	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 </head>
 <body class="title-{{ page.navtitle }} layout-{{ page.layout }}">
 	<!--[if lt IE 8]>
-		<div class="browsehappy cf">You are using a strongly <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+		<div class="browsehappy cf">
+			You are using a strongly <strong>outdated</strong> browser.
+			Please <a href="http://browsehappy.com/">upgrade your browser</a>
+			to improve your experience.
+		</div>
 	<![endif]-->
 	<div class="animate-wrap cf">
 		<div class="everything cf">
 			<header>
-				<a href="/"><img src="images/jelmer.jpeg" alt="Image of my head."></a>
+				<a href="/"><img src="/images/jelmer.jpeg" alt="Image of my head."></a>
 				<h1><a href="/">Design and code</a><br><sub>Jelmer de Maat</sub></h1>
-				<p>I am an inventor of physical and digital stuff. These are my works of design and code, made for all kinds of different purposes throughout the past, mostly related to education, work and/or fun. I am <a href="https://twitter.com/jelmerdemaat">@jelmerdemaat</a> on Twitter, <a href="https://github.com/jelmerdemaat">the same person</a> on GitHub and if you whish you can e-mail me at <span>post [at] jelmerdemaat [dot] nl</span>.
-				</header>
+				<nav class="main-nav medium-right">
+					<ul class="unstyled cf">
+
+						{% for weight in (1..5) %}
+							{% for p in site.pages %}
+								{% if p.weight == weight %}
+
+									<li>
+										<a {% if p.url == page.url %} class="active" {% endif %}  href="{{p.url}}">
+											{{ p.navtitle }}
+										</a>
+									</li>
+
+								{% endif %}
+							{% endfor %}
+						{% endfor %}
+
+					</ul>
+				</nav>
+				<p>I am an inventor of physical and digital stuff. These are my works of design and code,
+				 made for all kinds of different purposes throughout the past, mostly related to education,
+				 work and/or fun. I am <a href="https://twitter.com/jelmerdemaat">@jelmerdemaat</a>
+				 on Twitter, <a href="https://github.com/jelmerdemaat">the same person</a> on GitHub and
+				 if you whish you can e-mail me at <span>post [at] jelmerdemaat [dot] nl</span>.
+			</header>
 				<main>

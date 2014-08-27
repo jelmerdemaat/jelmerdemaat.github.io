@@ -1,0 +1,135 @@
+// ---------------------------------
+// Content
+// ---------------------------------
+
+article
+	margin: 0 5%
+
+	border-right: 1px solid white
+	border-bottom: 1px solid white
+
+	overflow: hidden
+
+	a
+		position: relative
+		display: block
+		border: 0
+
+		&:focus,
+		&:hover,
+		&:active
+			border: 0
+
+			div
+				$bg-darken: 35%
+				$bg-hover-opacity: 0.8
+
+				background: darken($orange, $bg-darken)
+				background: rgba(darken($orange, $bg-darken), $bg-hover-opacity)
+
+				&.color-red
+					background: darken($red, $bg-darken)
+					background: rgba(darken($red, $bg-darken), $bg-hover-opacity)
+
+				&.color-blue
+					background: darken($blue, $bg-darken)
+					background: rgba(darken($blue, $bg-darken), $bg-hover-opacity)
+
+				&.color-green
+					background: darken($green, $bg-darken)
+					background: rgba(darken($green, $bg-darken), $bg-hover-opacity)
+
+			h2
+				padding: 15px 0
+				border-color: rgba(white, .8)
+
+			ul
+				opacity: 1
+				+trans(.3, .2)
+
+			p
+				opacity: 1
+				-webkit-transform: translate3d(0, 0%, 0)
+				transform: translate3d(0, 0%, 0)
+
+	p
+		padding: 0 20px
+		padding: 0 6vw
+		opacity: 0
+
+		position: absolute
+		left: 0
+		right: 0
+		bottom: 20px
+
+		-webkit-transform: translate3d(0, 40%, 0)
+		transform: translate3d(0, 40%, 0)
+
+		+trans(.25, .1, $easing1)
+
+	div
+		$bg-opacity: 0.6
+
+		padding: 20px
+		padding: 6vw
+
+		background: $orange
+		background: rgba($orange, $bg-opacity)
+
+		&.color-red
+			background: $red
+			background: rgba($red, $bg-opacity)
+
+		&.color-blue
+			background: $blue
+			background: rgba($blue, $bg-opacity)
+
+		&.color-green
+			background: $green
+			background: rgba($green, $bg-opacity)
+
+		position: absolute
+		top: 0
+		right: 0
+		bottom: 0
+		left: 0
+
+		+trans(.4)
+
+	h2
+		margin: 0
+		padding: 40px 0
+		border-bottom: 1px solid transparent
+
+		+trans(.25)
+
+	ul,
+	ul.unstyled
+		opacity: 0
+		display: inline-block
+		margin-top: 20px
+
+		+trans(.3)
+
+	img
+		width: 100%
+
+.post-tags
+	li
+		margin-left: 20px
+		position: relative
+
+		&:before
+			color: $orange
+			line-height: 1
+			content: "*"
+			display: inline-block
+			position: absolute
+			top: 8px
+			left: -14px
+
+		&:first-child
+			margin-left: 0
+
+			&:before
+				display: none
