@@ -130,7 +130,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-newer');
 	grunt.loadNpmTasks('grunt-notify');
 
-	grunt.registerTask('build', ['sass:dist','newer:uglify','newer:jekyll']);
+	grunt.registerTask('build', ['sass:dist','uglify','jekyll']);
 	grunt.registerTask('default', ['build','browserSync','watch']);
 	grunt.registerTask('style', ['build','browserSync','watch:style']);
 
