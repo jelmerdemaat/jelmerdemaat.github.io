@@ -31,7 +31,7 @@ module.exports = function(grunt) {
 			},
 			style: {
 				options: {
-					sourcemap: 'auto',
+					// sourcemap: 'auto',
 					style: 'compact'
 				},
 				files: {
@@ -64,6 +64,22 @@ module.exports = function(grunt) {
 			}
 		},
 
+
+		svgstore: {
+			options: {
+				prefix: 'icon-',
+				svg: {
+					class: 'icons-svg'
+				}
+			},
+			build: {
+				files: {
+					'_includes/all.svg': ['svg/*.svg']
+				}
+			}
+		},
+
+
 		watch: {
 			sass: {
 				files: [
@@ -84,6 +100,11 @@ module.exports = function(grunt) {
 			js: {
 				files: ['jsraw/**/*.js'],
 				tasks: ['uglify']
+			},
+
+			svg: {
+				files: ['svg/*.svg'],
+				tasks: ['svg']
 			},
 
 			content: {
@@ -121,16 +142,19 @@ module.exports = function(grunt) {
 	});
 
 	grunt.loadNpmTasks('grunt-contrib-uglify');
-	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-contrib-sass');
-	grunt.loadNpmTasks('grunt-jekyll');
 	grunt.loadNpmTasks('grunt-autoprefixer');
+	grunt.loadNpmTasks('grunt-jekyll');
+	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-browser-sync');
 
 	grunt.loadNpmTasks('grunt-newer');
 	grunt.loadNpmTasks('grunt-notify');
 
-	grunt.registerTask('build', ['sass:dist','uglify','jekyll']);
+	grunt.loadNpmTasks('grunt-svgstore');
+
+	grunt.registerTask('svg', ['svgstore', 'jekyll']);
+	grunt.registerTask('build', ['sass:dist','uglify','svgstore','jekyll']);
 	grunt.registerTask('default', ['build','browserSync','watch']);
 	grunt.registerTask('style', ['build','browserSync','watch:style']);
 
