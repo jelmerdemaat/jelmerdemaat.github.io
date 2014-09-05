@@ -6,36 +6,8 @@ permalink: /
 weight: 1
 ---
 
-{% for post in site.posts %}
+{% for post in site.categories['project']  %}
 
-	<article>
-		<a href="{{ post.url }}" data-post-id="{{ post.id }}">
-			<div {% if post.color %}class="color-{{ post.color }}"{% endif %}>
-				<h2>{{ post.title }}</h2>
-				{{ post.excerpt}}
-				<ul class="unstyled listleft post-tags">
-					{% for tag in post.tags %}
-						<li>{{ tag }}</li>
-					{% endfor %}
-				</ul>
-			</div>
-			<img src="../images/{{ post.featured_image }}" alt="{{ post.featured_image_alt }}">
-		</a>
-	</article>
-
-	<section class="work" data-work-id="{{ post.id }}">
-		<div class="post-content">
-			<h2>{{ post.title }}</h2>
-			<ul class="unstyled listleft post-tags">
-				{% for tag in post.tags %}
-					<li>{{ tag }}</li>
-				{% endfor %}
-				{% if post.external_link %}
-					<li class="post-external-link"><a href="{{ post.external_link }}">{{ post.clean_link_title }}</a></li>
-				{% endif %}
-			</ul>
-			{{ post.content }}
-		</div>
-	</section>
+	{% include post-frontpage.htm %}
 
 {% endfor %}

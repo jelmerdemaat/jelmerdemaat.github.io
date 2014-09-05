@@ -6,4 +6,8 @@ permalink: /adventures/
 weight: 2
 ---
 
-adventures dude!
+{% for post in site.categories['adventure']  %}
+
+	{% include post-frontpage.htm %}
+
+{% endfor %}

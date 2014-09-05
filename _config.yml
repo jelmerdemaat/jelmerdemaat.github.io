@@ -1,7 +1,7 @@
 # Site settings
 title: Design and code
 email: post@jelmerdemaat.nl
-description: ""
+description: "Portfolio"
 baseurl: "http://192.168.0.108:3000"
 url: "http://jelmerdemaat.nl"
 exclude: [
@@ -18,4 +18,4 @@ plugins: "./_plugins"
 
 # Build settings
 markdown: kramdown
-permalink: /:year/:title/
+permalink: /:categories/:title/

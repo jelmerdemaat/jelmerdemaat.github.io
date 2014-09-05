@@ -111,10 +111,10 @@ module.exports = function(grunt) {
 				files: [
 					'*.htm',
 					'*.html',
-					'_layouts/*.htm',
-					'_posts/*.htm',
-					'_posts/*.md',
-					'_includes/*.htm',
+					'_layouts/**/*.htm',
+					'_posts/**/*.htm',
+					'_posts/**/*.md',
+					'_includes/**/*.htm',
 					'css/*.css',
 					'js/**/*.js'
 				],
