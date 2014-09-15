@@ -2,10 +2,12 @@ module.exports = function(grunt) {
 
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
-		banner: '/*! <%= pkg.title || pkg.name %> - v<%= pkg.version %> - ' +
-			'<%= grunt.template.today("yyyy-mm-dd") %>\n' +
-			'<%= pkg.homepage ? "* " + pkg.homepage + "\\n" : "" %>' +
-			'* Copyright (c) <%= grunt.template.today("yyyy") %> <%= pkg.author.name %> */\n',
+		banner: '/*! \n' +
+			' * <%= pkg.title || pkg.name %> - v<%= pkg.version %>\n' +
+			' * <%= grunt.template.today("yyyy-mm-dd HH:MM") %>\n' +
+			'<%= pkg.homepage ? " * " + pkg.homepage + "\\n" : "" %>' +
+			' * Copyright (c) <%= grunt.template.today("yyyy") %> <%= pkg.author.name %>\n' +
+			'*/\n',
 
 		uglify: {
 			options: {
@@ -157,5 +159,5 @@ module.exports = function(grunt) {
 	grunt.registerTask('build', ['sass:dist','uglify','svgstore','jekyll']);
 	grunt.registerTask('default', ['build','browserSync','watch']);
 	grunt.registerTask('style', ['build','browserSync','watch:style']);
-
+	grunt.registerTask('content', ['build', 'browserSync', 'watch:content']);
 };

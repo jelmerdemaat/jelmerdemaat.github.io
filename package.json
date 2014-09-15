@@ -1,4 +1,5 @@
 {
+  "title": "Jelmers Portfolio",
   "name": "portfolio",
   "author": {
     "name": "Jelmer de Maat",
@@ -6,6 +7,7 @@
     "url": "http://jelmerdemaat.nl"
   },
   "version": "0.1.5",
+  "homepage": "http://jelmerdemaat.nl",
   "engines": {
     "node": ">= 0.10.0"
   },

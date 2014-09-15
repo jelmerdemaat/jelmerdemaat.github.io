@@ -29,5 +29,5 @@ Since January 2013 I have been Chief Development at De Jongens van de TU.
 Examples of projects including my work:
 
 * Prodrive Technologies - [prodrive-technologies.com](http://prodrive-technologies.com)
-* GS Vastgoed - [gsvastgoed.nl](http://gsvastgoed.nl)
-* asd
+* GS Vastgoedbeheer - [gsvastgoed.nl](http://http://www.gsvastgoedbeheer.nl/)
+* Duinlust - [partycentrum-duinlust.nl](http://www.partycentrum-duinlust.nl/)

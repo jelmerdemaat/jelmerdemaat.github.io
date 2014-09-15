@@ -3,11 +3,11 @@
 		<div {% if post.color %}class="color-{{ post.color }}"{% endif %}>
 			<h2>{{ post.title }}</h2>
 			<p>{{ post.excerpt}}</p>
-			<ul class="unstyled listleft post-tags">
+			<!-- <ul class="unstyled listleft post-tags">
 				{% for tag in post.tags %}
 					<li>{{ tag }}</li>
 				{% endfor %}
-			</ul>
+			</ul> -->
 		</div>
 		<img src="../images/{{ post.featured_image }}" alt="{{ post.featured_image_alt }}">
 	</a>
