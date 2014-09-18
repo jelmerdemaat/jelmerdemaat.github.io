@@ -5,15 +5,19 @@ description: "Portfolio"
 baseurl: "http://192.168.0.108:3000"
 url: "http://jelmerdemaat.nl"
 exclude: [
-		"Gruntfile.js",
-		"*.sublime-*",
-		"node_modules",
-		"package.json",
-		"sass",
-		"jsraw"
-	]
+    "Gruntfile.js",
+    "*.sublime-*",
+    "node_modules",
+    "package.json",
+    "sass",
+    "jsraw"
+  ]
 destination: "./dist"
 plugins: "./_plugins"
+
+sitemap:
+  include_posts:
+    - "/index.html"
 
 
 # Build settings

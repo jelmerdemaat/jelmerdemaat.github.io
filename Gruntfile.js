@@ -44,7 +44,7 @@ module.exports = function(grunt) {
 
 		jekyll: {
 			options: {
-
+				// doctor: true
 			},
 			dist: {
 
@@ -118,7 +118,8 @@ module.exports = function(grunt) {
 					'_posts/**/*.md',
 					'_includes/**/*.htm',
 					'css/*.css',
-					'js/**/*.js'
+					'js/**/*.js',
+					'sitemap.xml'
 				],
 				tasks: ['jekyll']
 			}

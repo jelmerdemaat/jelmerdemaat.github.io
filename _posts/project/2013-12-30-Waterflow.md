@@ -14,6 +14,10 @@ color: blue
 
 Waterflow is an interactive projection that enables users to explore a wall by moving in front of it to reveal hidden spots.
 
+<div class="video-container">
+	<iframe src="//player.vimeo.com/video/34844808" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+</div>
+
 Waterflow is the result of one of my projects at Industrial Design (ID) at the Eindhoven University of Technology. The installation aims to create a fun and distressing moment in the work environment. Workers passing the installation can hide objects behind the water, and others can explore and find these clues.
 
 Another option is to project the other side of a wall as a background behind the waterfall. This creates a type of “digital curtain” that allows users to look through a wall.

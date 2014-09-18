@@ -1,6 +1,7 @@
 node_modules/
 grunt-browser-sync/
 dist/
+site/
 *.sublime-*
 
 # Compiled source #
