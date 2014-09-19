@@ -16,7 +16,8 @@ module.exports = function(grunt) {
 			dist: {
 				files: {
 					'js/app.min.js': 'jsraw/app.grande.js',
-					'js/vendor/fitvids.js': 'jsraw/vendor/fitvids.js'
+					'js/vendor/modernizr-2.8.3.min.js': 'jsraw/vendor/modernizr-2.8.3.js',
+					'js/vendor/fitvids.min.js': 'jsraw/vendor/fitvids.js'
 				}
 			}
 		},
