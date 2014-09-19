@@ -111,6 +111,7 @@ module.exports = function(grunt) {
 
 			content: {
 				files: [
+					'*.md',
 					'*.htm',
 					'*.html',
 					'_layouts/**/*.htm',

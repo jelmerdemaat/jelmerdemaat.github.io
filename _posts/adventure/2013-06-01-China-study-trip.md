@@ -15,3 +15,7 @@ clean_link_title:
 color: red
 ---
 
+In from May to July 2013 I was a member of the Chinatrip committee, organizing a study trip of 3 weeks to China. I was responsible for the communication towards participants.
+
+![Our China travel group](/images/china-beijing.jpg)
+![Our China travel group](/images/china-shanghai.jpg)

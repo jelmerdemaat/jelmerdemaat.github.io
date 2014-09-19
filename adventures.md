@@ -6,10 +6,10 @@ permalink: /adventures/
 weight: 2
 ---
 
-<h2>Places I've been</h2>
+## Places I've been
 
 {% for post in site.categories['adventure']  %}
 
-	{% include post-frontpage.htm %}
+  {% include post-frontpage.htm %}
 
 {% endfor %}
