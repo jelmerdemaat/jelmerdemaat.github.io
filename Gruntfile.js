@@ -1,7 +1,9 @@
 module.exports = function(grunt) {
 
 	grunt.initConfig({
+
 		pkg: grunt.file.readJSON('package.json'),
+
 		banner: '/*! \n' +
 			' * <%= pkg.title || pkg.name %> - v<%= pkg.version %>\n' +
 			' * <%= grunt.template.today("yyyy-mm-dd HH:MM") %>\n' +
@@ -129,7 +131,11 @@ module.exports = function(grunt) {
 
 		browserSync: {
 			files: {
-				src: ['dist/css/*.css', 'dist/**/*.html','dist/js/*.js']
+				src: [
+					'dist/css/*.css',
+					'dist/**/*.html',
+					'dist/js/*.js'
+				]
 			},
 			options: {
 				browser: 'google chrome',

@@ -1,3 +1,15 @@
+# Redirect old but frequently visited url:
+# http://code.jelmerdemaat.nl/2012/perfectly-justified-css-grid-technique-using-inline-block/
+# to:
+# http://codeandcolours.com/writes/perfectly-justified-css-grid-technique-using-inline-block/
+
+# <IfModule mod_rewrite.c>
+#   RewriteEngine On
+#   Options +FollowSymlinks
+#   RewriteCond %{http_host} ^code.jelmerdemaat.nl
+#   RewriteRule ^(.*)$ http://codeandcolours.com/$1 [R=301,L]
+# </IfModule>
+
 # By default allow cross-origin access to web fonts.
 
 <IfModule mod_headers.c>
