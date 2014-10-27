@@ -1,15 +1,15 @@
 ---
 layout: page
-title: Adventures | Jelmer de Maat
-navtitle: Adventures
-permalink: /adventures/
-weight: 2
+title: Blog | Jelmer de Maat
+navtitle: Blog
+permalink: /blog/
+weight: 3
 ---
 
-## Places I've been
+## Stuff I've written
 
-{% for post in site.categories['adventure']  %}
+{% for post in site.categories['blog']  %}
 
-  {% include post-frontpage.htm %}
+  {% include post-blog.htm %}
 
 {% endfor %}

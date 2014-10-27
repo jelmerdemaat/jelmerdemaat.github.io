@@ -6,7 +6,7 @@ var activeClass = 'active',
 
 $(window).ready(function() {
 
-	$('article').on('click', 'a', function(e) {
+	$('article.portfolio').on('click', 'a', function(e) {
 		e.preventDefault();
 
 		$this = $(this),
