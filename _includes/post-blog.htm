@@ -1,14 +1,9 @@
-<article class="post">
-	<a href="{{ post.url }}" data-post-id="{{ post.id }}">
-		<h2>{{ post.title }}</h2>
-	</a>
-	<ul class="unstyled listleft post-tags">
-		{% for tag in post.tags %}
-			<li>{{ tag }}</li>
-		{% endfor %}
-		{% if post.external_link %}
-			<li class="post-external-link"><a href="{{ post.external_link }}">{{ post.clean_link_title }}</a></li>
-		{% endif %}
-	</ul>
-	{{ post.excerpt }}
+<article class="blogpost">
+	<h3>
+		<a href="{{ post.url }}" data-post-id="{{ post.id }}">
+			{{ post.title }}
+		</a>
+	</h3>
+	<time datetime="{{ post.date }}">{{ post.date | date: "%A, %B %-d, %Y" }}</time>
+	<p>{{ post.excerpt }}</p>
 </article>

@@ -24,7 +24,9 @@ $(window).ready(function() {
 		closeWork();
 	});
 
-	$('.video-container').fitVids();
+	$videos = $('.video-container');
+
+	if($videos.length) $videos.fitVids();
 
 }); // doc.ready
 

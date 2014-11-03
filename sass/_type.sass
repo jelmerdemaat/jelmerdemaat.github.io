@@ -24,6 +24,11 @@ h6
 		color: inherit
 		font-weight: inherit
 
+		&:focus,
+		&:hover,
+		&:active
+			border: 0
+
 	& + p
 		margin-top: 0
 
@@ -103,7 +108,7 @@ header
 		white-space: nowrap
 
 nav
-	font-size: 18px
+	font-size: 16px
 
 article.portfolio
 	text-align: center
@@ -181,3 +186,7 @@ menu
 	&:hover,
 	&:active
 		border: 0
+
+time
+	color: $gray
+	font-size: 14px
