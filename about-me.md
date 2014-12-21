@@ -3,7 +3,7 @@ layout: page
 title: About me | Jelmer de Maat
 navtitle: About me
 permalink: /about-me/
-weight: 3
+weight: 4
 ---
 
 ## About me
