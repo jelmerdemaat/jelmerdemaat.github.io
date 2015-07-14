@@ -1,11 +1,17 @@
-node_modules/
+# Distribution files
 dist/
 
+# Node
+node_modules/
+*.log
+
+# Sass cache + sourcemaps
+.sass-cache/
 *.scssc
 *.sassc
-.sass-cache/
+*.css.map
 
+# Other
+.DS_Store
 *.rar
 *.zip
-
-*.log
