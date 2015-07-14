@@ -30,13 +30,13 @@ a:active, a:hover { outline: 0; }
 abbr[title] { border-bottom: 1px dotted; }
 
 /** Address style set to `bolder` in Firefox 4+, Safari, and Chrome. */
-b, strong { font-weight: bold; }
+b, strong { font-weight: 700; }
 
 /** Address styling not present in Safari and Chrome. */
 dfn { font-style: italic; }
 
 /** Address variable `h1` font-size and margin within `section` and `article` contexts in Firefox 4+, Safari, and Chrome. */
-h1 { font-size: 2em; margin: 0.67em 0; }
+h1 { font-size: 1.4em; margin: 0.67em 0; }
 
 /** Address styling not present in IE 8/9. */
 mark { background: #ff0; color: #000; }
@@ -124,8 +124,28 @@ table { border-collapse: collapse; border-spacing: 0; }
 
 td, th { padding: 0; }
 
-a { color: hotpink; }
+html { color: #444; font-size: 18px; line-height: 1.45; font-family: "jaf-facitweb-1", "jaf-facitweb-2", sans-serif; }
 
-@media (min-width: 480px) { a { color: firebrick; } }
+body { padding-top: 8%; padding-bottom: 8%; padding-top: 8vw; padding-bottom: 8vw; }
+
+h1, h2, h3, h4, h5 { margin-bottom: 0.1em; }
+
+small, time { color: gray; }
+
+h1 small { font-weight: 300; font-style: italic; display: block; }
+
+h1 a { color: inherit; }
+
+h2 { font-size: 2em; }
+
+a { color: tomato; text-decoration: none; display: inline-block; border-bottom: 0.1em solid transparent; }
+
+a:hover, a:focus, a:active { border-color: initial; }
+
+section { max-width: 40em; width: 80%; margin: 0 auto; }
+
+.jdm-intro p { color: grey; font-size: 16px; }
+
+article { margin: 2em 0; }
 
 /*# sourceMappingURL=maps/app.css.map */
