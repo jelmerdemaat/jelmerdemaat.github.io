@@ -2,8 +2,6 @@ var gulp = require('gulp'),
     sass = require('gulp-sass'),
     csso = require('gulp-csso'),
   	sourcemaps = require('gulp-sourcemaps'),
-  	uglify = require('gulp-uglify'),
-  	concat = require('gulp-concat'),
   	rename = require('gulp-rename');
 
 var src = 'src/',
@@ -17,11 +15,6 @@ var html = {
 var scss = {
 	src: src + 'sass/**/*.scss',
 	dest: dest + 'css/'
-}
-
-var javascript = {
-	src: src + 'javascript/**/*.js',
-	dest: dest + 'js/'
 }
 
 gulp.task('html', function() {
@@ -54,38 +47,17 @@ gulp.task('scss:build', function() {
     .pipe(gulp.dest(scss.dest));
 });
 
-gulp.task('javascript', function() {
-  gulp.src(javascript.src)
-    .on('error', function(err) {
-      console.log(err);
-    })
-    .pipe(gulp.dest(javascript.dest));
-});
-
-gulp.task('javascript:build', function() {
-  gulp.src(javascript.src)
-    .pipe(uglify())
-    .on('error', function(err) {
-      console.log(err);
-    })
-    .pipe(gulp.dest(javascript.dest));
-});
-
-
 gulp.task('develop', [
 	'html',
-	'scss',
-	'javascript'
+	'scss'
 ]);
 
 gulp.task('build', [
   'html',
-  'scss:build',
-  'javascript:build'
+  'scss:build'
 ]);
 
 gulp.task('default', ['develop'], function() {
 	gulp.watch(html.src, ['html']);
 	gulp.watch(scss.src, ['scss']);
-	gulp.watch(javascript.src, ['javascript']);
 });

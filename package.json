@@ -10,12 +10,10 @@
   },
   "devDependencies": {
     "gulp": "*",
-    "gulp-concat": "*",
     "gulp-csso": "*",
     "gulp-rename": "*",
     "gulp-sass": "*",
-    "gulp-sourcemaps": "*",
-    "gulp-uglify": "*"
+    "gulp-sourcemaps": "*"
   },
   "repository": {
     "url": "git@github.com:jelmerdemaat/jelmerdemaat.github.io.git"
