@@ -11,8 +11,11 @@ var src = 'src/',
     dest = 'assets/';
 
 var html = {
-	src: src + '*.html',
-	dest: dest
+	src: [
+    src + '**/*.html',
+    '!' + src + 'includes/*'
+  ],
+	dest: './'
 }
 
 var scss = {
@@ -23,11 +26,9 @@ var scss = {
 gulp.task('html', function() {
 	gulp.src(html.src)
     .pipe(include({
-      extensions: 'html'
+      // extensions: 'html'
     }))
-    .on('error', function(err) {
-      console.log(err);
-    })
+    .on('error', console.log)
 		.pipe(gulp.dest(html.dest));
 });
 
