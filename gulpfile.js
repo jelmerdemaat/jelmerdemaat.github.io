@@ -2,10 +2,13 @@ var gulp = require('gulp'),
     sass = require('gulp-sass'),
     csso = require('gulp-csso'),
   	sourcemaps = require('gulp-sourcemaps'),
-  	rename = require('gulp-rename');
+    include = require('gulp-include'),
+  	rename = require('gulp-rename'),
+    browserSync = require('browser-sync').create(),
+    pkg = require('./package.json');
 
 var src = 'src/',
-	dest = 'dist/';
+    dest = 'assets/';
 
 var html = {
 	src: src + '*.html',
@@ -19,6 +22,12 @@ var scss = {
 
 gulp.task('html', function() {
 	gulp.src(html.src)
+    .pipe(include({
+      extensions: 'html'
+    }))
+    .on('error', function(err) {
+      console.log(err);
+    })
 		.pipe(gulp.dest(html.dest));
 });
 
@@ -32,7 +41,8 @@ gulp.task('scss', function() {
     .on('error', function(err) {
       console.log(err);
     })
-    .pipe(gulp.dest(scss.dest));
+    .pipe(gulp.dest(scss.dest))
+    .pipe(browserSync.stream({match: '**/*.css'}));
 });
 
 gulp.task('scss:build', function() {
@@ -57,7 +67,16 @@ gulp.task('build', [
   'scss:build'
 ]);
 
-gulp.task('default', ['develop'], function() {
-	gulp.watch(html.src, ['html']);
+gulp.task('serve', ['develop'], function() {
+  browserSync.init({
+    server: "./",
+    logConnections: true,
+    logPrefix: pkg.name,
+    open: false
+  });
+
+	gulp.watch(html.src, ['html']).on('change', browserSync.reload);
 	gulp.watch(scss.src, ['scss']);
 });
+
+gulp.task('default', ['serve']);

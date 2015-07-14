@@ -9,8 +9,10 @@
     "url": "jelmerdemaat.nl"
   },
   "devDependencies": {
+    "browser-sync": "*",
     "gulp": "*",
     "gulp-csso": "*",
+    "gulp-include": "*",
     "gulp-rename": "*",
     "gulp-sass": "*",
     "gulp-sourcemaps": "*"
