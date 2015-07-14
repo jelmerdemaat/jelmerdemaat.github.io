@@ -1,13 +1,12 @@
 {
-  "name": "%name%",
+  "name": "jelmerdemaat.github.io",
   "version": "0.0.1",
-  "description": "%description%",
+  "description": "My website.",
   "license": "MIT",
-  "title": "%title%",
+  "title": "Jelmer de Maat",
   "author": {
     "name": "Jelmer de Maat",
-    "email": "%email%",
-    "url": "%website%"
+    "url": "jelmerdemaat.nl"
   },
   "devDependencies": {
     "gulp": "*",
@@ -19,6 +18,6 @@
     "gulp-uglify": "*"
   },
   "repository": {
-    "url": "%repository%"
+    "url": "git@github.com:jelmerdemaat/jelmerdemaat.github.io.git"
   }
 }
