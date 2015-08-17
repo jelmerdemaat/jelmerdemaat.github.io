@@ -128,23 +128,33 @@ html { color: #444; font-size: 18px; line-height: 1.45; font-family: "jaf-facitw
 
 body { padding-top: 8%; padding-bottom: 8%; padding-top: 8vw; padding-bottom: 8vw; }
 
-h1, h2, h3, h4, h5 { margin-bottom: 0.1em; }
+h1, h2, h3, h4, h5, h6 { margin-bottom: 0.25em; }
+
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { border: none; }
 
 small, time { color: gray; }
 
-h1 small { font-weight: 300; font-style: italic; display: block; }
+h1 { font-size: 2em; }
 
-h1 a { color: inherit; }
+h2 { font-size: 1.6em; }
 
-h2 { font-size: 2em; }
+h3 { font-style: italic; font-weight: 400; }
 
-a { color: tomato; text-decoration: none; display: inline-block; border-bottom: 0.1em solid transparent; }
+a { color: cornflowerblue; text-decoration: none; border-bottom: 1px solid; }
 
-a:hover, a:focus, a:active { border-color: initial; }
+a:hover, a:focus, a:active { color: royalblue; }
 
-section { max-width: 40em; width: 80%; margin: 0 auto; }
+header, main { max-width: 40em; width: 80%; margin: 0 auto; }
 
-.jdm-intro p { color: grey; font-size: 16px; }
+article header { width: auto; max-width: none; margin: 0; }
+
+.jdm-intro p { color: grey; font-size: 14px; }
+
+.jdm-logo { display: block; }
+
+.jdm-logo a { color: inherit; border: 0; }
+
+.jdm-logo small { display: block; font-weight: normal; font-style: italic; }
 
 article { margin: 2em 0; }
 

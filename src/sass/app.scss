@@ -5,14 +5,17 @@
 /// Example media query:
 
 $font-stack: "jaf-facitweb-1", "jaf-facitweb-2", sans-serif;
-$color: tomato;
+$color-alpha: cornflowerblue;
+$color-delta: royalblue;
+$color-alpha-dark: darken($color-alpha, 20%);
+$color-delta-dark: darken($color-delta, 20%);
 
-// cornflowerblue
-// darkseagreen
-// crimson
-// darkcyan
-// darkorange
-// darksalmon
+// $color: cornflowerblue
+// $color: darkseagreen
+// $color: crimson
+// $color: darkcyan
+// $color: darkorange
+// $color: darksalmon
 
 html {
   color: #444;
@@ -32,10 +35,12 @@ h1,
 h2,
 h3,
 h4,
-h5 {
-  margin-bottom: 0.1em;
+h5,
+h6 {
+  margin-bottom: 0.25em;
 
   a {
+    border: none;
   }
 }
 
@@ -45,47 +50,62 @@ time {
 }
 
 h1 {
-  small {
-    font-weight: 300;
-    font-style: italic;
-    display: block;
-  }
-
-  a {
-    color: inherit;
-  }
-}
-
-h2 {
   font-size: 2em;
 }
 
-a {
-  color: $color;
-  text-decoration: none;
-  display: inline-block;
-  border-bottom: 0.1em solid transparent;
+h2 {
+  font-size: 1.6em;
+}
 
-  &:hover,
-  &:focus,
-  &:active {
-    border-color: initial;
+h3 {
+  font-style: italic;
+  font-weight: 400;
+}
+
+a {
+  color: $color-alpha;
+  text-decoration: none;
+  border-bottom: 1px solid;
+
+  @include hocus {
+    color: $color-delta;
   }
 }
 
-section {
+header,
+main {
   max-width: 40em;
   width: 80%;
   margin: 0 auto;
 }
 
+article header {
+  width: auto;
+  max-width: none;
+  margin: 0;
+}
+
 .jdm-intro {
   p {
     color: grey;
-    font-size: 16px;
+    font-size: 14px;
   }
 }
 
+.jdm-logo {
+  display: block;
+
+  a {
+    color: inherit;
+    border: 0;
+  }
+
+  small {
+    display: block;
+    font-weight: normal;
+    font-style: italic;
+  }
+}
 
 article {
   margin: 2em 0;

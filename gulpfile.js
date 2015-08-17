@@ -3,7 +3,9 @@ var gulp = require('gulp'),
     csso = require('gulp-csso'),
   	sourcemaps = require('gulp-sourcemaps'),
     include = require('gulp-include'),
+    filter = require('gulp-filter'),
   	rename = require('gulp-rename'),
+  	util = require('gulp-util'),
     browserSync = require('browser-sync').create(),
     pkg = require('./package.json');
 
@@ -12,23 +14,30 @@ var src = 'src/',
 
 var html = {
 	src: [
-    src + '**/*.html',
-    '!' + src + 'includes/*'
+    src + '**/*.html'
   ],
-	dest: './'
-}
+  dest: './'
+};
 
 var scss = {
 	src: src + 'sass/**/*.scss',
 	dest: dest + 'css/'
-}
+};
 
 gulp.task('html', function() {
+  var f = filter(['*','!src/includes']);
+
+  /// TODO: Fix filer in build process
+
 	gulp.src(html.src)
     .pipe(include({
       // extensions: 'html'
     }))
-    .on('error', console.log)
+    .on('error', function(err) {
+      util.log(err);
+    })
+    .pipe(f)
+    // .pipe(util.log('*', '!' + src + 'includes/*.'))
 		.pipe(gulp.dest(html.dest));
 });
 
@@ -40,7 +49,7 @@ gulp.task('scss', function() {
     }))
     .pipe(sourcemaps.write('./maps/'))
     .on('error', function(err) {
-      console.log(err);
+      util.log(err);
     })
     .pipe(gulp.dest(scss.dest))
     .pipe(browserSync.stream({match: '**/*.css'}));
@@ -53,7 +62,7 @@ gulp.task('scss:build', function() {
     }))
     .pipe(csso())
     .on('error', function(err) {
-      console.log(err);
+      util.log(err);
     })
     .pipe(gulp.dest(scss.dest));
 });

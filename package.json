@@ -12,10 +12,12 @@
     "browser-sync": "*",
     "gulp": "*",
     "gulp-csso": "*",
+    "gulp-filter": "^3.0.0",
     "gulp-include": "*",
     "gulp-rename": "*",
     "gulp-sass": "*",
-    "gulp-sourcemaps": "*"
+    "gulp-sourcemaps": "*",
+    "gulp-util": "^3.0.6"
   },
   "repository": {
     "url": "git@github.com:jelmerdemaat/jelmerdemaat.github.io.git"
