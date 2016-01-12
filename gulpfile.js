@@ -2,12 +2,17 @@ var gulp = require('gulp'),
     sass = require('gulp-sass'),
     csso = require('gulp-csso'),
   	sourcemaps = require('gulp-sourcemaps'),
+  	autoprefixer = require('gulp-autoprefixer'),
     include = require('gulp-include'),
     filter = require('gulp-filter'),
   	rename = require('gulp-rename'),
   	util = require('gulp-util'),
     browserSync = require('browser-sync').create(),
     pkg = require('./package.json');
+
+
+/// Settings
+////////////////////////////////////////////////////////
 
 var src = 'src/',
     dest = 'assets/';
@@ -19,25 +24,26 @@ var html = {
   dest: './'
 };
 
+
 var scss = {
 	src: src + 'sass/**/*.scss',
-	dest: dest + 'css/'
+	dest: dest + 'css/',
+  browsers: ['> 2%', 'last 2 versions', 'IE >= 10']
 };
 
-gulp.task('html', function() {
-  var f = filter(['*','!src/includes']);
 
-  /// TODO: Fix filer in build process
+/// Tasks
+////////////////////////////////////////////////////////
+
+gulp.task('html', function() {
+  html.filter = filter(['**', '!includes/**']);
 
 	gulp.src(html.src)
-    .pipe(include({
-      // extensions: 'html'
-    }))
+    .pipe(html.filter)
+    .pipe(include())
     .on('error', function(err) {
-      util.log(err);
+      util.log(err.message, err.description)
     })
-    .pipe(f)
-    // .pipe(util.log('*', '!' + src + 'includes/*.'))
 		.pipe(gulp.dest(html.dest));
 });
 
@@ -47,12 +53,13 @@ gulp.task('scss', function() {
     .pipe(sass({
       outputStyle: 'compact'
     }))
+    .pipe(autoprefixer({
+      browsers: scss.browsers
+    }))
     .pipe(sourcemaps.write('./maps/'))
-    .on('error', function(err) {
-      util.log(err);
-    })
+    .on('error', util.log)
     .pipe(gulp.dest(scss.dest))
-    .pipe(browserSync.stream({match: '**/*.css'}));
+    .pipe(browserSync.stream({ match: '**/*.css' }));
 });
 
 gulp.task('scss:build', function() {
@@ -60,10 +67,12 @@ gulp.task('scss:build', function() {
     .pipe(sass({
       outputStyle: 'compressed'
     }))
+    .pipe(autoprefixer({
+      browsers: scss.browsers
+    }))
     .pipe(csso())
-    .on('error', function(err) {
-      util.log(err);
-    })
+    .on('error', util.log)
+    .pipe(rename({ suffix: '.min' }))
     .pipe(gulp.dest(scss.dest));
 });
 

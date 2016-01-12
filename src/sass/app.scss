@@ -1,14 +1,15 @@
-@import "variables",
-        "mixins",
+@import "mixins",
         "normalize";
 
 /// Example media query:
 
 $font-stack: "jaf-facitweb-1", "jaf-facitweb-2", sans-serif;
 $color-alpha: cornflowerblue;
-$color-delta: royalblue;
+$color-beta: royalblue;
 $color-alpha-dark: darken($color-alpha, 20%);
-$color-delta-dark: darken($color-delta, 20%);
+$color-beta-dark: darken($color-beta, 20%);
+
+$color-gray-medium: #666;
 
 // $color: cornflowerblue
 // $color: darkseagreen
@@ -17,11 +18,22 @@ $color-delta-dark: darken($color-delta, 20%);
 // $color: darkorange
 // $color: darksalmon
 
+html,
+body {
+  overflow-x: hidden;
+  background: white;
+}
+
 html {
   color: #444;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.45;
   font-family: $font-stack;
+  font-feature-settings: "smcp" 1, "kern" 1, "liga" 1, "dlig" 1, "hlig" 1, "clig" 1;
+
+  @media screen and (min-width: 480px) {
+    font-size: 18px;
+  }
 }
 
 body {
@@ -37,11 +49,26 @@ h3,
 h4,
 h5,
 h6 {
-  margin-bottom: 0.25em;
+  font-weight: 600;
 
   a {
     border: none;
   }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+code,
+.gist,
+aside,
+time {
+  margin-top: 1em;
+  margin-bottom: 0;
 }
 
 small,
@@ -49,7 +76,12 @@ time {
   color: gray;
 }
 
+time {
+  display: inline-block;
+}
+
 h1 {
+  color: $color-gray-medium;
   font-size: 2em;
 }
 
@@ -58,37 +90,60 @@ h2 {
 }
 
 h3 {
+  color: $color-beta;
   font-style: italic;
   font-weight: 400;
 }
+
+h4 {
+  color: $color-gray-medium;
+}
+
 
 a {
   color: $color-alpha;
   text-decoration: none;
   border-bottom: 1px solid;
+  transition: color 0.1s ease-out;
 
   @include hocus {
-    color: $color-delta;
+    color: $color-beta;
   }
 }
 
 header,
-main {
+main,
+aside {
   max-width: 40em;
   width: 80%;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+main {
+  margin-top: 80px;
+  margin-top: 8rem;
+  margin-top: 8vmin;
+}
+
+aside {
+  font-size: 0.8em;
+  text-align: center;
 }
 
 article header {
   width: auto;
   max-width: none;
   margin: 0;
+  text-align: center;
 }
 
 .jdm-intro {
+  text-align: center;
+
   p {
     color: grey;
-    font-size: 14px;
+    font-size: #{(14 / 18)}em;
   }
 }
 
@@ -110,3 +165,20 @@ article header {
 article {
   margin: 2em 0;
 }
+
+
+// [class*="wf-jaffacitweb"][class*="wf-loading"] {
+//   opacity: 0;
+// }
+//
+// .wf-active {
+//   background: white;
+//   opacity: 0;
+//   animation: textFadeIn 0.15s forwards;
+// }
+//
+// @keyframes textFadeIn {
+//   100% {
+//     opacity: 1;
+//   }
+// }
